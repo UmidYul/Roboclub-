@@ -26,7 +26,8 @@ app.get('/python', (req, res) => {
 })
 app.post("/contact", (req, res) => {
     const { lastname, message, name, phone } = req.body;
-    bot.telegram.sendMessage(admin, `Name: ${name} 
+    bot.telegram.sendMessage(admin, `
+Name: ${name} 
 
 Lastname: ${lastname}
 
