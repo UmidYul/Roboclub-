@@ -7,7 +7,7 @@ const port = 3000
 const admin = "1705541075"
 const bot = new Telegraf("5630630605:AAFIlnAE3SN4HIPvipPS6vViGm6e0PSH8jk");
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public/'))
 app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/views/index.html")
